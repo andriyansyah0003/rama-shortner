@@ -1,0 +1,18 @@
+body {
+  font-family: "poppins", sans-serif;
+}
+.navbar {
+  background-color: #198754;
+}
+.navbar-brand,
+.card-title {
+  font-weight: bold;
+}
+.wrapper {
+  margin-top: 3.5rem;
+}
+.copyright-text {
+  background-color: #198754;
+  color: #fff;
+  padding-top: 15px;
+}
