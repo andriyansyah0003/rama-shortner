@@ -2,16 +2,18 @@ const buttonShortener = document.querySelector("#btn-shortener");
 buttonShortener.addEventListener("click", function () {
   const url = document.querySelector("#url");
   fetch("https://rama-shortner-backend.herokuapp.com/url/short", {
-    method: "POST", // or 'PUT'
+    method: "POST",
     headers: {
-      "Content-Type": "application/json; charset=UTF-8",
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(url),
+    body: JSON.stringify({
+      url: url.value,
+    }),
     redirect: "follow",
   })
     .then((response) => response.json())
     .then((data) => {
-      document.getElementById("result").value = data.data["key"];
+      document.querySelector("#result").value = data.data["key"];
     })
     .catch((error) => {
       console.error("Error:", error);
@@ -19,7 +21,7 @@ buttonShortener.addEventListener("click", function () {
 });
 
 function btnCopy() {
-  const copyText = document.getElementById("result");
+  const copyText = document.querySelector("#result");
 
   copyText.select();
   copyText.setSelectionRange(0, 99999); /* For mobile devices */
