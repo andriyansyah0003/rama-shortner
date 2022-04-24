@@ -1,6 +1,6 @@
 # rama-shortner
 
-tool to shorten URL (Uniform Resource Locator)
+Tool to shorten URL (Uniform Resource Locator)
 
 You can visit :
 https://ramashortner.netlify.app
