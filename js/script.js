@@ -1,7 +1,7 @@
 const buttonShortener = document.querySelector("#btn-shortener");
 buttonShortener.addEventListener("click", function () {
   const url = document.querySelector("#url");
-  fetch("https://rama-shortner-backend.herokuapp.com/url/short", {
+  fetch("https://rama-shortner-backend.herokuapp.com/short", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
